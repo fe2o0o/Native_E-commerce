@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="master-css/all.css">
+        <link rel="stylesheet" href="master-css/bootstrap.min.css">
+        <link rel="stylesheet" href="master-css/index.css">
+        <title>Shop</title>
+    </head>
+    <body>
+        <section id="loading" class=" position-fixed d-none top-0 bottom-0 end-0 start-0 ">
+            <img src="images/loading.gif" class="w-100 h-100">
+        </section>
+        <header>
+            <div class="top-nav  p-2">
+                <div class="container d-flex align-items-center justify-content-between w-75">
+                    <div class="w-25">
+                        <ul class="list-unstyled d-flex justify-content-between m-0 align-items-center">
+                            <li><a href="" class="fw-bold">Blog</a></li>
+                            <li><a href="" class="fw-bold">Featured Products</a></li>
+                            <li><a href="" class="fw-bold">Wishlist</a></li>
+                        </ul>
+                    </div>
+                    <div class="w-50">
+                        <ul id="handleNav" class="list-unstyled d-flex m-0 justify-content-end align-items-center">
+                            <li><a href="" class="fw-bold">Sign Up</a></li>
+                            <li><a href="" class="fw-bold">My Account</a></li>
+                            <li><a href="" class="fw-bold">Order Tracking</a></li>
+                            <li>
+                                <select name="" id="" class="bg-transparent p-0 border-0 fw-bold ">
+                                    <option value="">USD</option>
+                                    <option value="">EUP</option>
+                                    <option value="">GBP</option>
+                                    <option value="">IDR</option>
+                                </select>
+                            </li>
+                            <li>
+                                <select class="bg-transparent p-0 border-0 fw-bold" name="" id="">
+                                    <option value="">English</option>
+                                    <option value="">Arabic</option>
+                                    <option value="">Franch</option>
+                                </select>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <nav class="navbar navbar-expand-lg bg-body-tertiary py-1">
+                <div class="container w-75 py-3">
+                    <a class="navbar-brand" href="#">
+                        <img class="w-100" src="images/logo.png" alt="">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link " aria-current="page" href="Shop.html">Shop</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link " aria-current="page" href="Blog.html">Blog</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link " aria-current="page" href="#">Women</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link " aria-current="page" href="#">Men</a>
+                            </li>
+                            <li class="nav-item position-relative">
+                                <span id="new" class="position-absolute fs-6 bg-danger text-white p-1 rounded-2  ">NEW</span>
+                                <a class="nav-link " aria-current="page" href="#">Sports</a>
+                            </li>
+                        </ul>
+                        <div class="d-flex me-4">
+                            <div class="me-4 fs-5 position-relative">
+                                <span id="cartCount">0</span>
+                                <i id="cartIcon" class="fa-solid fa-cart-shopping"></i>
+                                <div id="hoverCart" class="position-absolute rounded-2 d-none ">
+                                    <div class="container">
+                                        <h6 class="pb-3 fs-5 "><span id="numOfItemsCart">0</span> Items In Cart</h6>
+                                        <div id="cartItemsHover" class="mb-4">
+                                            <div class="cartItem">
+                                                <div class="cartItemImg">
+                                                    <img class="w-100" src="images/shoe1.jpg" alt="">
+                                                </div>
+                                                <div class="cartItemContent mb-4">
+                                                    <p class="m-0">Product Name</p>
+                                                    <div class="info d-flex justify-content-between align-items-center">
+                                                        <p class="m-0">price</p>
+                                                        <span class="bg-danger  fs-6">x 2</span>
+                                                    </div>
+                                                </div>
+                                                <i class="fa-solid fa-xmark text-danger"></i>
+                                            </div>
+                                        </div>
+                                        <p class="text-success fs-4 fw-bolder" id="totalPriceCart">$</p>
+                                        <button class="btn w-100 btn-dark"><a href="/myCart.html" class="text-white">View Cart</a></button>
+                                    </div>
+        
+                                </div>
+                            </div>
+                            <div class="fs-5 position-relative ">
+                                <span id="heartCount">0</span>
+                                <i class="fa-solid fa-heart"></i>
+                            </div>
+                        </div>
+                        <h5><a href=""><span class="me-2">Welcome</span><span id="userName" class="text-success">(User
+                                    Name)</span></a></h5>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main id="shop">
+            <section class="featured">
+                <div class="container w-75">
+                    <div class="prouductsItemShop">
+                        <div class="proItem border overflow-hidden p-2 position-relative">
+                            <div id="proOver" class="d-flex flex-column justify-content-between ">
+                                <i class="fa-solid fa-eye"></i>
+                                <i class="fa-regular fa-heart"></i>
+                            </div>
+                            <div class="img mb-3  overflow-hidden ">
+                                <img class="w-100" src="images/f1.jpg" alt="">
+                            </div>
+                            <div class="body ">
+                                <h6 class="fw-bold fs-5">Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops</h6>
+                                <p class="my-1 ho">
+                                    Your perfect pack for everyday use and walks in the forest
+                                </p>
+                                <p class="ho mb-1">men's clothing</p>
+                                <div id="rate" class="mb-1">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <p class="fw-bold fs-5">150$</p>
+                                    <p class="bg-success rounded-2 px-2 py-1 text-white">
+                                        <i class="fa-solid fa-plus"></i>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="proItem border overflow-hidden p-2 position-relative">
+                            <div id="proOver" class="d-flex flex-column justify-content-between ">
+                                <i class="fa-solid fa-eye"></i>
+                                <i class="fa-regular fa-heart"></i>
+                            </div>
+                            <div class="img mb-3  overflow-hidden ">
+                                <img class="w-100" src="images/f2.jpg" alt="">
+                            </div>
+                            <div class="body ">
+                                <h6 class="fw-bold fs-5">Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops</h6>
+                                <p class="my-1 ho">
+                                    Your perfect pack for everyday use and walks in the forest
+                                </p>
+                                <p class="ho mb-1">men's clothing</p>
+                                <div id="rate" class="mb-1">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <p class="fw-bold fs-5">150$</p>
+                                    <p class="bg-success rounded-2 px-2 py-1 text-white">
+                                        <i class="fa-solid fa-plus"></i>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="proItem border overflow-hidden p-2 position-relative">
+                            <div id="proOver" class="d-flex flex-column justify-content-between ">
+                                <i class="fa-solid fa-eye"></i>
+                                <i class="fa-regular fa-heart"></i>
+                            </div>
+                            <div class="img mb-3  overflow-hidden ">
+                                <img class="w-100" src="images/f3.jpg" alt="">
+                            </div>
+                            <div class="body ">
+                                <h6 class="fw-bold fs-5">Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops</h6>
+                                <p class="my-1 ho">
+                                    Your perfect pack for everyday use and walks in the forest
+                                </p>
+                                <p class="ho mb-1">men's clothing</p>
+                                <div id="rate" class="mb-1">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <p class="fw-bold fs-5">150$</p>
+                                    <p class="bg-success rounded-2 px-2 py-1 text-white">
+                                        <i class="fa-solid fa-plus"></i>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="proItem border overflow-hidden p-2 position-relative">
+                            <div id="proOver" class="d-flex flex-column justify-content-between ">
+                                <i class="fa-solid fa-eye"></i>
+                                <i class="fa-regular fa-heart"></i>
+                            </div>
+                            <div class="img mb-3  overflow-hidden ">
+                                <img class="w-100" src="images/f4.jpg" alt="">
+                            </div>
+                            <div class="body ">
+                                <h6 class="fw-bold fs-5">Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops</h6>
+                                <p class="my-1 ho">
+                                    Your perfect pack for everyday use and walks in the forest
+                                </p>
+                                <p class="ho mb-1">men's clothing</p>
+                                <div id="rate" class="mb-1">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <p class="fw-bold fs-5">150$</p>
+                                    <p class="bg-success rounded-2 px-2 py-1 text-white">
+                                        <i class="fa-solid fa-plus"></i>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="proItem border overflow-hidden p-2 position-relative">
+                            <div id="proOver" class="d-flex flex-column justify-content-between ">
+                                <i class="fa-solid fa-eye"></i>
+                                <i class="fa-regular fa-heart"></i>
+                            </div>
+                            <div class="img mb-3  overflow-hidden ">
+                                <img class="w-100" src="images/f5.jpg" alt="">
+                            </div>
+                            <div class="body ">
+                                <h6 class="fw-bold fs-5">Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops</h6>
+                                <p class="my-1 ho">
+                                    Your perfect pack for everyday use and walks in the forest
+                                </p>
+                                <p class="ho mb-1">men's clothing</p>
+                                <div id="rate" class="mb-1">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <p class="fw-bold fs-5">150$</p>
+                                    <p class="bg-success rounded-2 px-2 py-1 text-white">
+                                        <i class="fa-solid fa-plus"></i>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="proItem border overflow-hidden p-2 position-relative">
+                            <div id="proOver" class="d-flex flex-column justify-content-between ">
+                                <i class="fa-solid fa-eye"></i>
+                                <i class="fa-regular fa-heart"></i>
+                            </div>
+                            <div class="img mb-3  overflow-hidden ">
+                                <img class="w-100" src="images/f6.jpg" alt="">
+                            </div>
+                            <div class="body ">
+                                <h6 class="fw-bold fs-5">Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops</h6>
+                                <p class="my-1 ho">
+                                    Your perfect pack for everyday use and walks in the forest
+                                </p>
+                                <p class="ho mb-1">men's clothing</p>
+                                <div id="rate" class="mb-1">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <p class="fw-bold fs-5">150$</p>
+                                    <p class="bg-success rounded-2 px-2 py-1 text-white">
+                                        <i class="fa-solid fa-plus"></i>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="proItem border overflow-hidden p-2 position-relative">
+                            <div id="proOver" class="d-flex flex-column justify-content-between ">
+                                <i class="fa-solid fa-eye"></i>
+                                <i class="fa-regular fa-heart"></i>
+                            </div>
+                            <div class="img mb-3  overflow-hidden ">
+                                <img class="w-100" src="images/f7.jpg" alt="">
+                            </div>
+                            <div class="body ">
+                                <h6 class="fw-bold fs-5">Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops</h6>
+                                <p class="my-1 ho">
+                                    Your perfect pack for everyday use and walks in the forest
+                                </p>
+                                <p class="ho mb-1">men's clothing</p>
+                                <div id="rate" class="mb-1">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <p class="fw-bold fs-5">150$</p>
+                                    <p class="bg-success rounded-2 px-2 py-1 text-white">
+                                        <i class="fa-solid fa-plus"></i>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="proItem border overflow-hidden p-2 position-relative">
+                            <div id="proOver" class="d-flex flex-column justify-content-between ">
+                                <i class="fa-solid fa-eye"></i>
+                                <i class="fa-regular fa-heart"></i>
+                            </div>
+                            <div class="img mb-3  overflow-hidden ">
+                                <img class="w-100" src="images/f8.jpg" alt="">
+                            </div>
+                            <div class="body ">
+                                <h6 class="fw-bold fs-5">Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops</h6>
+                                <p class="my-1 ho">
+                                    Your perfect pack for everyday use and walks in the forest
+                                </p>
+                                <p class="ho mb-1">men's clothing</p>
+                                <div id="rate" class="mb-1">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <p class="fw-bold fs-5">150$</p>
+                                    <p class="bg-success rounded-2 px-2 py-1 text-white">
+                                        <i class="fa-solid fa-plus"></i>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="proItem border overflow-hidden p-2 position-relative">
+                            <div id="proOver" class="d-flex flex-column justify-content-between ">
+                                <i class="fa-solid fa-eye"></i>
+                                <i class="fa-regular fa-heart"></i>
+                            </div>
+                            <div class="img mb-3  overflow-hidden ">
+                                <img class="w-100" src="images/n1.jpg" alt="">
+                            </div>
+                            <div class="body ">
+                                <h6 class="fw-bold fs-5">Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops</h6>
+                                <p class="my-1 ho">
+                                    Your perfect pack for everyday use and walks in the forest
+                                </p>
+                                <p class="ho mb-1">men's clothing</p>
+                                <div id="rate" class="mb-1">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <p class="fw-bold fs-5">150$</p>
+                                    <p class="bg-success rounded-2 px-2 py-1 text-white">
+                                        <i class="fa-solid fa-plus"></i>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="proItem border overflow-hidden p-2 position-relative">
+                            <div id="proOver" class="d-flex flex-column justify-content-between ">
+                                <i class="fa-solid fa-eye"></i>
+                                <i class="fa-regular fa-heart"></i>
+                            </div>
+                            <div class="img mb-3  overflow-hidden ">
+                                <img class="w-100" src="images/n2.jpg" alt="">
+                            </div>
+                            <div class="body ">
+                                <h6 class="fw-bold fs-5">Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops</h6>
+                                <p class="my-1 ho">
+                                    Your perfect pack for everyday use and walks in the forest
+                                </p>
+                                <p class="ho mb-1">men's clothing</p>
+                                <div id="rate" class="mb-1">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <p class="fw-bold fs-5">150$</p>
+                                    <p class="bg-success rounded-2 px-2 py-1 text-white">
+                                        <i class="fa-solid fa-plus"></i>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="proItem border overflow-hidden p-2 position-relative">
+                            <div id="proOver" class="d-flex flex-column justify-content-between ">
+                                <i class="fa-solid fa-eye"></i>
+                                <i class="fa-regular fa-heart"></i>
+                            </div>
+                            <div class="img mb-3  overflow-hidden ">
+                                <img class="w-100" src="images/n3.jpg" alt="">
+                            </div>
+                            <div class="body ">
+                                <h6 class="fw-bold fs-5">Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops</h6>
+                                <p class="my-1 ho">
+                                    Your perfect pack for everyday use and walks in the forest
+                                </p>
+                                <p class="ho mb-1">men's clothing</p>
+                                <div id="rate" class="mb-1">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <p class="fw-bold fs-5">150$</p>
+                                    <p class="bg-success rounded-2 px-2 py-1 text-white">
+                                        <i class="fa-solid fa-plus"></i>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="proItem border overflow-hidden p-2 position-relative">
+                            <div id="proOver" class="d-flex flex-column justify-content-between ">
+                                <i class="fa-solid fa-eye"></i>
+                                <i class="fa-regular fa-heart"></i>
+                            </div>
+                            <div class="img mb-3  overflow-hidden ">
+                                <img class="w-100" src="images/n4.jpg" alt="">
+                            </div>
+                            <div class="body ">
+                                <h6 class="fw-bold fs-5">Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops</h6>
+                                <p class="my-1 ho">
+                                    Your perfect pack for everyday use and walks in the forest
+                                </p>
+                                <p class="ho mb-1">men's clothing</p>
+                                <div id="rate" class="mb-1">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <p class="fw-bold fs-5">150$</p>
+                                    <p class="bg-success rounded-2 px-2 py-1 text-white">
+                                        <i class="fa-solid fa-plus"></i>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="proItem border overflow-hidden p-2 position-relative">
+                            <div id="proOver" class="d-flex flex-column justify-content-between ">
+                                <i class="fa-solid fa-eye"></i>
+                                <i class="fa-regular fa-heart"></i>
+                            </div>
+                            <div class="img mb-3  overflow-hidden ">
+                                <img class="w-100" src="images/n5.jpg" alt="">
+                            </div>
+                            <div class="body ">
+                                <h6 class="fw-bold fs-5">Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops</h6>
+                                <p class="my-1 ho">
+                                    Your perfect pack for everyday use and walks in the forest
+                                </p>
+                                <p class="ho mb-1">men's clothing</p>
+                                <div id="rate" class="mb-1">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <p class="fw-bold fs-5">150$</p>
+                                    <p class="bg-success rounded-2 px-2 py-1 text-white">
+                                        <i class="fa-solid fa-plus"></i>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="proItem border overflow-hidden p-2 position-relative">
+                            <div id="proOver" class="d-flex flex-column justify-content-between ">
+                                <i class="fa-solid fa-eye"></i>
+                                <i class="fa-regular fa-heart"></i>
+                            </div>
+                            <div class="img mb-3  overflow-hidden ">
+                                <img class="w-100" src="images/n6.jpg" alt="">
+                            </div>
+                            <div class="body ">
+                                <h6 class="fw-bold fs-5">Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops</h6>
+                                <p class="my-1 ho">
+                                    Your perfect pack for everyday use and walks in the forest
+                                </p>
+                                <p class="ho mb-1">men's clothing</p>
+                                <div id="rate" class="mb-1">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <p class="fw-bold fs-5">150$</p>
+                                    <p class="bg-success rounded-2 px-2 py-1 text-white">
+                                        <i class="fa-solid fa-plus"></i>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="proItem border overflow-hidden p-2 position-relative">
+                            <div id="proOver" class="d-flex flex-column justify-content-between ">
+                                <i class="fa-solid fa-eye"></i>
+                                <i class="fa-regular fa-heart"></i>
+                            </div>
+                            <div class="img mb-3  overflow-hidden ">
+                                <img class="w-100" src="images/n8.jpg" alt="">
+                            </div>
+                            <div class="body ">
+                                <h6 class="fw-bold fs-5">Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops</h6>
+                                <p class="my-1 ho">
+                                    Your perfect pack for everyday use and walks in the forest
+                                </p>
+                                <p class="ho mb-1">men's clothing</p>
+                                <div id="rate" class="mb-1">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <p class="fw-bold fs-5">150$</p>
+                                    <p class="bg-success rounded-2 px-2 py-1 text-white">
+                                        <i class="fa-solid fa-plus"></i>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="join">
+                <div class="container  w-75">
+                    <div class="text-white">
+                        <h3 class="fs-2">Join Our NewsLetter</h3>
+                        <p>Get E-mail Up Date about our latest <span class="fw-bold text-danger">Special Offers</span></p>
+                    </div>
+                    <div class="position-relative">
+                        <input type="text" class="form-control" placeholder="Enter Your Email">
+                        <button class="position-absolute top-0 end-0 btn btn-danger">Sign Up</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="container w-75">
+                <div>
+                    <h4>Help & Contact</h4>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="">Your Account</a>
+                        </li>
+                        <li>
+                            <a href="">Your Ordars</a>
+                        </li>
+                        <li>
+                            <a href="">Shopping Rate</a>
+                        </li>
+                        <li>
+                            <a href="">Shopping Rate</a>
+                        </li>
+                        <li>
+                            <a href="">Assastant</a>
+                        </li>
+                        <li>
+                            <a href="">Contact us</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Product Category</h4>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="">Beauty</a>
+                        </li>
+                        <li>
+                            <a href="">Electronic</a>
+                        </li>
+                        <li>
+                            <a href="">Women's Fashons</a>
+                        </li>
+                        <li>
+                            <a href="">Men's Fashons</a>
+                        </li>
+                        <li>
+                            <a href="">Home & Decor</a>
+                        </li>
+                        <li>
+                            <a href="">Sports</a>
+                        </li>
+                        <li>
+                            <a href="">Jewelery</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Payment Info</h4>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="">Business Card</a>
+                        </li>
+                        <li>
+                            <a href="">PayPal</a>
+                        </li>
+                        <li>
+                            <a href="">Fawery</a>
+                        </li>
+                        <li>
+                            <a href="">Cridt Card</a>
+                        </li>
+                        <li>
+                            <a href="">Debit Card</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>About Us</h4>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="">News</a>
+                        </li>
+                        <li>
+                            <a href="">Company Info</a>
+                        </li>
+                        <li>
+                            <a href="">Carears</a>
+                        </li>
+                        <li>
+                            <a href="">Customer's Review</a>
+                        </li>
+                        <li>
+                            <a href="">Photoes</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        <section class="footer-bottom">
+            <div class="container w-75">
+                <div class="mb-3 d-flex justify-content-center">
+                    <img class="" src="images/logo.png" alt="">
+                </div>
+                <div class="links mb-3 d-flex justify-content-center">
+                    <span>
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </span>
+                    <span>
+                        <i class="fa-brands fa-twitter"></i>
+                    </span>
+                    <span>
+                        <i class="fa-brands fa-instagram"></i>
+                    </span>
+                    <span>
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </span>
+                    <span>
+                        <i class="fa-brands fa-youtube"></i>
+                    </span>
+                </div>
+                <h5 class="d-flex justify-content-center">Made For <span class="text-danger ms-2">MOKA <i class="fa-solid fa-heart"></i></span></h5>
+            </div>
+        </section>
+        <script src="master-js/bootstrap.bundle.min.js"></script>
+        <script src="master-js/index.js"></script>
+    </body>
+</html>
