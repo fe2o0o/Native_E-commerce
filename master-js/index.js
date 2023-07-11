@@ -340,7 +340,7 @@ getUserAccount().then(function () {
 async function viewProduct(id) {
     let data = await getSpacificProuduct(id);
     localStorage.setItem("product", JSON.stringify(data));
-    window.location.pathname = "product.html"
+    window.location.pathname = "/product.html";
 }
 
 if (window.location.pathname === "/product.html") {
